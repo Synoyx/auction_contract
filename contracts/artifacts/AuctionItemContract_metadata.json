@@ -1,0 +1,229 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "itemName",
+								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "auctionStartValue",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "auctionStep",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "auctionReservePrice",
+								"type": "int256"
+							},
+							{
+								"internalType": "address",
+								"name": "ownerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "auctionEndDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct AuctionItem",
+						"name": "_auctionItem",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isItemSold",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "highestBidValue",
+						"type": "int256"
+					}
+				],
+				"name": "ActionEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "newHighestBidValue",
+						"type": "int256"
+					}
+				],
+				"name": "HighestBidIncreased",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "auctionId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "auctionItem",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "itemName",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "auctionStartValue",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "auctionStep",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "auctionReservePrice",
+						"type": "int256"
+					},
+					{
+						"internalType": "address",
+						"name": "ownerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "auctionEndDate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endAuction",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBidder",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "bidderAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "int256",
+						"name": "bidValue",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Contract to manage bid about a precise object*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AuctionItemContract.sol": "AuctionItemContract"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AuctionItem.sol": {
+			"keccak256": "0x09ac776f07c41efa239c1422a2c115ce22eab8685545a3562a25cd544bf3bd9c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7e0c71e4123b7c3aa5ad8e476e8c2525f6fa95f0fa6bb192a35b6891d23c79bd",
+				"dweb:/ipfs/QmVha7B9FoazagDPaBadByAa12LiY8TyGKbhJMsxGz1zYr"
+			]
+		},
+		"contracts/AuctionItemContract.sol": {
+			"keccak256": "0x4a31db11ac83e8910b6b89b99df0b05e06e6e4715f8835029e21fc53835f0bcf",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://862bba6b2f7e48e97238febbae458a12735b83826e68a064c4c998d08892f7a0",
+				"dweb:/ipfs/QmcXgkq9TTNz6E4BYSu7m8Ucftpzzof9xQBfeic8TUwzrQ"
+			]
+		},
+		"contracts/Bidder.sol": {
+			"keccak256": "0x050a913edd31f5662254eb8cf18bf9b1ebf6b13dcfb8a5ccd0a0351cbcf83037",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2443750eb9e514253a81ee4ce3d410f4eedc62bfb9a29ec91d8b39bb262cfb50",
+				"dweb:/ipfs/QmahafgR47gN6Cu9iRqPHAyTEHZjbruA9v8bGpx95dHoct"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x7434453e6d3b7d0e5d0eb7846ffdbc27f0ccf3b163591263739b628074dc103a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49355f780520494d1d5a0f01858385e51bb5280ce0ecfb960f16995065dca395",
+				"dweb:/ipfs/QmSwJ6C5QLz6xKeQZS8wbwjU1KxRFTYfwbGmtzisd5sRW4"
+			]
+		}
+	},
+	"version": 1
+}

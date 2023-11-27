@@ -1,0 +1,195 @@
+{
+	"id": "f5d34ba323236a26763727d9a2c77ba8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/AuctionItem.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.8.2 <0.9.0;\r\n\r\nstruct AuctionItem {\r\n    string itemName;\r\n    int256 auctionStartValue;\r\n    int256 auctionStep;\r\n    int256 auctionReservePrice;\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/AuctionItem.sol": {
+				"ast": {
+					"absolutePath": "contracts/AuctionItem.sol",
+					"exportedSymbols": {
+						"AuctionItem": [
+							10
+						]
+					},
+					"id": 11,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.8",
+								".2",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:31:0"
+						},
+						{
+							"canonicalName": "AuctionItem",
+							"id": 10,
+							"members": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "itemName",
+									"nameLocation": "105:8:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 10,
+									"src": "98:15:0",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_storage_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "98:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 5,
+									"mutability": "mutable",
+									"name": "auctionStartValue",
+									"nameLocation": "127:17:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 10,
+									"src": "120:24:0",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_int256",
+										"typeString": "int256"
+									},
+									"typeName": {
+										"id": 4,
+										"name": "int256",
+										"nodeType": "ElementaryTypeName",
+										"src": "120:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_int256",
+											"typeString": "int256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 7,
+									"mutability": "mutable",
+									"name": "auctionStep",
+									"nameLocation": "158:11:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 10,
+									"src": "151:18:0",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_int256",
+										"typeString": "int256"
+									},
+									"typeName": {
+										"id": 6,
+										"name": "int256",
+										"nodeType": "ElementaryTypeName",
+										"src": "151:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_int256",
+											"typeString": "int256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 9,
+									"mutability": "mutable",
+									"name": "auctionReservePrice",
+									"nameLocation": "183:19:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 10,
+									"src": "176:26:0",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_int256",
+										"typeString": "int256"
+									},
+									"typeName": {
+										"id": 8,
+										"name": "int256",
+										"nodeType": "ElementaryTypeName",
+										"src": "176:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_int256",
+											"typeString": "int256"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "AuctionItem",
+							"nameLocation": "79:11:0",
+							"nodeType": "StructDefinition",
+							"scope": 11,
+							"src": "72:134:0",
+							"visibility": "public"
+						}
+					],
+					"src": "37:169:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
