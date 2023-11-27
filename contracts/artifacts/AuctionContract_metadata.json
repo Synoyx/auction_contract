@@ -49,6 +49,22 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "length",
+						"type": "uint256"
+					}
+				],
+				"name": "StringsInsufficientHexLength",
+				"type": "error"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -89,6 +105,13 @@
 			}
 		],
 		"devdoc": {
+			"errors": {
+				"StringsInsufficientHexLength(uint256,uint256)": [
+					{
+						"details": "The `value` string doesn't fit in the specified `length`."
+					}
+				]
+			},
 			"kind": "dev",
 			"methods": {},
 			"version": 1
@@ -141,11 +164,11 @@
 			]
 		},
 		"contracts/AuctionContract.sol": {
-			"keccak256": "0x683e1e628a25bbcf671040a2c45e94e308b694f2eb86fe4802497a2efbfbcf7f",
+			"keccak256": "0xea5e173e497caa1bfb25776eea564dad82c579ab95469bbcc6990882f0dfb3b3",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5423d3c5f0fe895ba642b48beaa962c0d3f054ce7198ec1b263ac113789fad48",
-				"dweb:/ipfs/QmYqrar7u8FVsqixxcmMjNGZjmXmpbW1YjoSK8zDMh5jDr"
+				"bzz-raw://2266a9d708038ea05e43502ef9677b33f594923973a5d0e993de050211c7bb00",
+				"dweb:/ipfs/QmVt7HbdrovytPWaiZs14eLthennW4DyqmVEL4uZ7WM3aV"
 			]
 		},
 		"contracts/AuctionItem.sol": {

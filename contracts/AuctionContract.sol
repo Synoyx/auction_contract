@@ -21,7 +21,7 @@ contract AuctionContract {
     // List of auction items
     AuctionItem[] auctionItems;
     
-    mapping (AuctionItemContract => AuctionItem) contractItemsMap;
+    mapping (string => AuctionItemContract) contractItemsMap;
 
 
     /**************************
@@ -48,13 +48,14 @@ contract AuctionContract {
 
             // Creating a auction contract for the current item, and storing it
             AuctionItemContract itemContract = new AuctionItemContract(auctionItems[i]);
-            contractItemsMap[itemContract] = auctionItems[i];
+            contractItemsMap[auctionItems[i].itemName] = itemContract;
         }
     }
 
     function logAuctions() public view {
         for (uint i = 0; i < auctionItems.length; i++) {
-            console.log(string.concat("Item name = ", auctionItems[i].itemName, ",  item start price : ", Strings.toString(uint(auctionItems[i].auctionStartValue))));
+
+            console.log(string.concat("Item name = ", auctionItems[i].itemName, ",  item start price : ", Strings.toString(uint(auctionItems[i].auctionStartValue)), " contract address : ", Strings.toHexString(uint160(address(contractItemsMap[auctionItems[i].itemName])), 20)));
         }
     }
 
