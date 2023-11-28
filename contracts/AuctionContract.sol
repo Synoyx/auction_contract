@@ -59,6 +59,12 @@ contract AuctionContract {
         }
     }
 
+    function listContacts() public view {
+        for (uint i = 0; i < auctionITems.length; i++) {
+            console.log(string.concat("Contract address : ", Strings.toHexString(uint160(address(contractItemsMap[auctionItems[i].itemName])), 20), " for the item : ", auctionITems[i].itemName));
+        }
+    }
+
 
     /**************************
     *        Modifiers
